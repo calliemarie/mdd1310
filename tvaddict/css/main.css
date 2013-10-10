@@ -1,12 +1,11 @@
-@import url(http://fonts.googleapis.com/css?family=Archivo+Narrow);
 body {
-   background-color: #5dace9;
+   background-color: #e3a9f4;
 }
 h1, h2, h3 {
-    font-family: 'Archivo Narrow', sans-serif;
+    font-family: 'Lobster', cursive;
 }
 .banner {
-    background-color: #0074cd;
+    background-color: #000000;
     color: #FFF;
     height: 100px;
 }
