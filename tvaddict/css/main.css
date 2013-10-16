@@ -4,14 +4,20 @@ body {
 h1, h2, h3 {
     font-family: 'Lobster', cursive;
 }
+
+ul
+{
+    list-style-type: none;
+}
+
 .banner {
     background-color: #000000;
     color: #FFF;
-    height: 100px;
+    height: 200px;
 }
 .banner h1 {
     font-size: 50px;
-    line-height: 50px;
+    line-height: 150px;
 }
 .main-frame {
     background-color: #FFF;
@@ -65,7 +71,7 @@ h1, h2, h3 {
 .episode-list li {
     padding-bottom: 10px;
     margin-bottom: 10px;
-    border-bottom: dotted 1px #5dace9;
+    border-bottom: dotted 1px #7b3df7;
 }
 
 .episode-list li:last-child {
