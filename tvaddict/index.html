@@ -6,25 +6,45 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js" type="text/javascript"></script>
+   
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.5/angular.min.js" type="text/javascript"></script>
+    
+     <script src="https://cdn.firebase.com/v0/firebase.js"></script>
+	<script src="js/angularFire.min.js" type="text/javascript" ></script>
+	
     <script type="text/javascript" src="js/tvaddict/app.js"></script>
 	<script type="text/javascript" src="js/tvaddict/controllers/mainController.js"></script>
 	<link rel="stylesheet" href="css/main.css">
 	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
   </head>
   <body>
+  		<div class="signin">
+	  		<a href="login.html">Log In</a>
+	  		<a href="member.html">Join TV Addict</a>
+
+  		</div>
       <div class='banner'>
         <div class='container'>
-            <h1>TV Addict</h1>
-            <p>helping you get your fix since 2013</p>
+            <h1><a href="index.html">TV Addict</a></h1>
+
         </div>
     </div>
 	<div class="container main-frame" ng-app="TVAddictApp" ng-controller="mainController" ng-init="init()">
-		<div class="search-box row-fluid form-inline"></div>
+		<div class="search-box row-fluid form-inline">
+			<label>Search: </label>
+			<label>Genre: </label>
+				<select ng-model="genreFilter" ng-options="label for label in availableGenres">
+					<option value="">All</option>
+				</select>
+			<input type="text" ng-model="filterText"/>
+		</div>
         <div class="results-top"></div>
+        
+        {{items}}
+        
         <div class="results-container">
             <ul class="episode-list"></ul>
-            <li ng-repeat="tvshow in results">
+				<li ng-repeat="tvshow in results | filter: filterText">
 				<div class="row-fluid">
 					<div class="span3">
 						<img src="{{tvshow.episode.images.screen}}" />
