@@ -16,10 +16,10 @@ ul
 	padding: 12px; 
 }
 
-a:link {color: #ffffff;}
-a:visited {color: #999999; text-decoration: none}
-a:hover {color: white; background-color: #7e28d9; text-decoration: none}
-a:active {color: white;}
+.signin a:link {color: #ffffff;}
+.signin a:visited {color: #ffffff; text-decoration: none}
+.signin a:hover {color: white; background-color: #7e28d9; text-decoration: none}
+.signin a:active {color: white;}
 
 .login, .signup{
 	border: black;

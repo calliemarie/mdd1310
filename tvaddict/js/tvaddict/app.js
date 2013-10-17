@@ -1,1 +1,1 @@
-var app = angular.module('TVAddictApp',['firebase']);
+var app = angular.module('TVAddictApp',[]);

@@ -1,16 +1,9 @@
-app.controller("mainController", function($scope, $http, angularFire){
+app.controller("mainController", function($scope, $http){
     $scope.apiKey = "2570b1bc1a12b222f700fc67b507b8bf";
     $scope.results = [];
     $scope.filterText = null;
     $scope.availableGenres = [];
     $scope.genreFilter = null;
-    
-    var url = 'https://www.firebase.com/tutorial/#session/etc8lwbx815';
-//    $scope.items = angularFire(url, $scope, 'items');
-
-    var ref = new Firebase(url);
-	console.log(ref);
-
     $scope.init = function() {
         //API requires a start date
         var today = new Date();
@@ -47,6 +40,6 @@ app.controller("mainController", function($scope, $http, angularFire){
         });
     };
 });
-    var url = 'https://<my-firebase>.firebaseio.com/items';
-    $scope.items = angularFire(url, $scope, 'items');
+   // var url = 'firebase user url';
+    //$scope.items = angularFire(url, $scope, 'items');
  
